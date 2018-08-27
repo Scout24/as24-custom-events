@@ -39,20 +39,20 @@ after_success:
       fi
     fi
 deploy:
-  - provider: npm
-    email: '#AS24-Web-Experience-Team-ds@scout24.com'
-    skip_cleanup: true
-    api_key:
-      secure: EQAjDRVU2diHI1/qFkpP5OCbEsfVZ958yAliF7t9STjQaTgpKy5N+r0LHRjeZ39JlnpKv0MD3mR2fkFtmc4Sk/u4tlTDG9c8CaeRnk2FVdbwXGjaJ4Y5c+bITn1y+FIOigQ+Ikl1OTPh9W1FYdWcCNnQ5sUoSOoIrx9zDjZG9kJtMXDd6zZ8vXJkOwjC6OZs03MDtQpSndOlpmpgSKv58q2sknkkbpSiHvPZ11GDLSp5CeggcR8uWvuLAM3/wt03/ChnrPzwmMpDlZvr7JaEOcJACZZf0GAcNAIk/TKrU4auoR+cVG/KBLm/dXqdzGGy63yneYFF89umG6Eneh+CKR6USMulxqTrQysKzdcxYin7PoMOiYcHU5gQNSPt+Wj6z/K+G4yx0ggr1irKxR5/ulRY4ltambcfkL1NE+7RpFs4PVcs288JezkECuW90b1MKvusjuhSEu3sJsmr0AB16kg9bQfRkiaDfLBzB/EHszHsrXl2c7NqPmn/5nDwUhPvGy6wbwBatQTNM8zdaLNaIsJUFrrBT8dsi2DxVR3aE4N9WUvRGzUj1VriwKkKFxRFk6g0MwcPvNlJkSO9a7Yrtr3rihoY39/k39cq8mh80iosZAVjj5Wxro358I8h+rHkoHwDA3bgkMrfblo784IWtDOkENoNhPCMGA5DHVmSR08=
-    on:
-      tags: true
-      repo: Scout24/as24-custom-events
-      branch: master
   - provider: releases
     skip_cleanup: true
     file_glob: true
     file:
       - './dist/**/*'
+    on:
+      tags: true
+      repo: Scout24/as24-custom-events
+      branch: master
+  - provider: npm
+    email: '#AS24-Web-Experience-Team-ds@scout24.com'
+    skip_cleanup: true
+    api_key:
+      secure: EQAjDRVU2diHI1/qFkpP5OCbEsfVZ958yAliF7t9STjQaTgpKy5N+r0LHRjeZ39JlnpKv0MD3mR2fkFtmc4Sk/u4tlTDG9c8CaeRnk2FVdbwXGjaJ4Y5c+bITn1y+FIOigQ+Ikl1OTPh9W1FYdWcCNnQ5sUoSOoIrx9zDjZG9kJtMXDd6zZ8vXJkOwjC6OZs03MDtQpSndOlpmpgSKv58q2sknkkbpSiHvPZ11GDLSp5CeggcR8uWvuLAM3/wt03/ChnrPzwmMpDlZvr7JaEOcJACZZf0GAcNAIk/TKrU4auoR+cVG/KBLm/dXqdzGGy63yneYFF89umG6Eneh+CKR6USMulxqTrQysKzdcxYin7PoMOiYcHU5gQNSPt+Wj6z/K+G4yx0ggr1irKxR5/ulRY4ltambcfkL1NE+7RpFs4PVcs288JezkECuW90b1MKvusjuhSEu3sJsmr0AB16kg9bQfRkiaDfLBzB/EHszHsrXl2c7NqPmn/5nDwUhPvGy6wbwBatQTNM8zdaLNaIsJUFrrBT8dsi2DxVR3aE4N9WUvRGzUj1VriwKkKFxRFk6g0MwcPvNlJkSO9a7Yrtr3rihoY39/k39cq8mh80iosZAVjj5Wxro358I8h+rHkoHwDA3bgkMrfblo784IWtDOkENoNhPCMGA5DHVmSR08=
     on:
       tags: true
       repo: Scout24/as24-custom-events
