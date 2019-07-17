@@ -3,3 +3,7 @@
 exports[`global events event names must never change 1`] = `"AS24_WATCHLIST_EVENT"`;
 
 exports[`global events event names must never change 2`] = `"FAVORITES:READY"`;
+
+exports[`global events event names must never change 3`] = `"WATCHLIST:FAVORITE_ADDED"`;
+
+exports[`global events event names must never change 4`] = `"WATCHLIST:FAVORITE_REMOVED"`;
